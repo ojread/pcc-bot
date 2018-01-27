@@ -3,5 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:ojread/pcc-bot.git",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "es6-promise": "^4.2.4",
+    "express": "^4.16.2",
+    "isomorphic-fetch": "^2.2.1",
+    "request": "^2.83.0"
+  }
 }
