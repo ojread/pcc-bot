@@ -11,16 +11,17 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
+// Show some help if someone visits the API.
+app.get('/', (req, res) => res.send('Hello World!'));
+
+// Deal with posts to the API.
 app.post('/', function(req, res) {
   res.json({
     message: 'test'
   });
 });
 
-app.get('/', (req, res) => res.send('Hello World!'));
-
-
-
+// Start the server.
 app.listen((process.env.PORT || 8000), function() {
     console.log("Server up and listening");
 });
