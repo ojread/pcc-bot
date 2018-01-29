@@ -21,6 +21,12 @@ app.post('/', function(req, res) {
   });
 });
 
+app.post('/weather', function(req, res) {
+  res.json({
+    message: 'weather will be here'
+  });
+});
+
 // Start the server.
 app.listen((process.env.PORT || 8000), function() {
     console.log("Server up and listening");
