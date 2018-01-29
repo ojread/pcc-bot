@@ -16,8 +16,6 @@ app.get('/', (req, res) => res.send("There's nothing for you here!"));
 
 // Deal with posts to the API.
 app.post('/', function(req, res) {
-
-  res.setHeader('Content-Type', 'application/json'); //Requires application/json MIME type
   res.json({
     'fulfillmentText': 'Test webhook response',
   });
