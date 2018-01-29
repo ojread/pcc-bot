@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Show some help if someone visits the API.
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.send("There's nothing for you here!"));
 
 // Deal with posts to the API.
 app.post('/', function(req, res) {
