@@ -17,7 +17,8 @@ app.get('/', (req, res) => res.send("There's nothing for you here."));
 // Deal with posts to the API.
 // Dialog flow sends all requests here, not to different paths.
 app.post('/', function(req, res) {
-  console.log(req);
+  // We can get request details here.
+  console.log(req.body.queryResult.action);
   
   res.json({
     fulfillmentText: 'Test webhook response',
