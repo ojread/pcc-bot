@@ -2,7 +2,9 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-var request = require('request');
+const request = require('request');
+const path = require('path');
+
 const app = express();
 
 app.use(bodyParser.urlencoded({
@@ -11,11 +13,13 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-// Show some help if someone visits the API.
-app.get('/', (req, res) => res.send("There's nothing for you here."));
+// Show a chat demo to anyone visiting the app.
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname + '/index.html'));
+});
 
 // Deal with posts to the API.
-// Dialog flow sends all requests here, not to different paths.
+// Dialogflow sends all requests here, not to different paths.
 app.post('/', function(req, res) {
   // We can get request details here.
   console.log(req.body.queryResult.action);
