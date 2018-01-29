@@ -18,9 +18,9 @@ app.get('/', (req, res) => res.send("There's nothing for you here!"));
 app.post('/', function(req, res) {
 
   res.setHeader('Content-Type', 'application/json'); //Requires application/json MIME type
-  res.send(JSON.stringify({
+  res.json({
     'fulfillmentText': 'Test webhook response',
-  }));
+  });
 });
 
 // app.post('/weather', function(req, res) {
