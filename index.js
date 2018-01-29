@@ -23,8 +23,26 @@ app.post('/', function(req, res) {
 
 app.post('/weather', function(req, res) {
   res.json({
-    message: 'weather will be here'
-  });
+    'fulfillmentText': 'fulfillmentText',
+    // 'fulfillmentMessages': [
+    //   {
+    //     object(Message)
+    //   }
+    // ],
+    'source': 'source',
+    // 'payload': {
+    //   object
+    // },
+    // 'outputContexts': [
+    //   {
+    //     object(Context)
+    //   }
+    // ],
+    // 'followupEventInput': {
+    //   object(EventInput)
+    // },
+  }
+  );
 });
 
 // Start the server.
